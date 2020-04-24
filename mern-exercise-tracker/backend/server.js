@@ -27,8 +27,9 @@ mongoose.connect( uri, { useNewUrlParser: true, useCreateIndex: true, useUnified
 const exercisesRouter = require('./routes/exercises');
 const usersRouter = require('./routes/users');
 
-app.use('/exercises', exercisesRouter);
-app.use('/users', usersRouter);
+// We are using app.use to use these files
+app.use('/exercises', exercisesRouter); // 'localhost://5000/exercises' => will load the exercisesRouter 
+app.use('/users', usersRouter);         // 'localhost://5000/users' => will load the usersRouter
 
 
 

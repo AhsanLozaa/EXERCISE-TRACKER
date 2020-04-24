@@ -9,23 +9,24 @@ let User = require('../models/user.model');
  * url path
  * 
  */
-router.route('/').get((req, res) => {
-    User.find()
-        .then(users => res.json(users))
-        .catch(err => res.status(400).json('Error: ' + err));
+router.route('/').get((req, res) => { // This is a get request
+    User.find() // A mongoose method. 
+        .then(users => res.json(users)) // getting all the users as a json file
+        .catch(err => res.status(400).json('Error: ' + err)); // get the error if its an error
 });
 
 
 // This is a post request
-router.route('/add').post((req, res) => {
+router.route('/add').post((req, res) => { // This will handle the post request
     const username = req.body.username;
 
-    const newUser = new User({username});
+    const newUser = new User({username}); // Creating a new instance of user using the username
 
+    // saving the user to the database
     newUser.save()
-        .then(() => res.json('User added!'))
+        .then(() => res.json('User added!')) // if adding new user adding is successful
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
-
+//
 module.exports = router;
