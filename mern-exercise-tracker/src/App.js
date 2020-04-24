@@ -9,7 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // Importing the Components
 import Navbar from "./components/navbar.component";
 import ExerciseList from "./components/exercises-list.component";
-import EditExercise from "./components/edit-exercises.component";
+import EditExercise from "./components/edit-exercise.component";
 import CreateExercise from "./components/create-exercise.component";
 import CreateUser from "./components/create-user.component";
 

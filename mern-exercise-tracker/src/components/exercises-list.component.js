@@ -1,6 +1,6 @@
-import React, { Comonent } from 'react';
+import React, { Component } from 'react';
 
-export default class ExercisesList extends Comonent{
+export default class ExercisesList extends Component{
     render(){
         return(
             <div>
